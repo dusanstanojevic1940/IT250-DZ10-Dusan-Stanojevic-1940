@@ -24,8 +24,7 @@ public class GenericEditor<T extends AbstractEntity> {
 	private Class<T> entityClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];;
 
 	public List<T> getGrid() {
-		List<T> temp = genericDao.all(entityClass); 
-		return temp;
+		return genericDao.all(entityClass); 
 	}
 	
 	@CommitAfter
